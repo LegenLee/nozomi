@@ -1,40 +1,21 @@
 {
   "name": "nozomi",
-  "private": true,
   "version": "1.0.0",
-  "description": "A Minecraft Launcher",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
   "author": "LegenLee",
   "license": "Apache-2.0",
-  "engines": {
-    "node": ">=24.18.0"
-  },
   "devEngines": {
     "packageManager": {
       "name": "pnpm",
-      "version": "12.4.1"
+      "version": "12.15.0",
+      "onFail": "download"
     }
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/legenlee/nozomi"
-  },
-  "type": "module",
-  "scripts": {
-    "main": "pnpm --filter @nozomi/main",
-    "renderer": "pnpm --filter @nozomi/renderer",
-    "build": "pnpm --filter @nozomi/renderer build && pnpm --filter @nozomi/main build",
-    "package": "pnpm run build && pnpm --filter @nozomi/main package",
-    "lint": "eslint .",
-    "format": "prettier -w .",
-    "typecheck": "pnpm -r typecheck"
-  },
-  "devDependencies": {
-    "@eslint/js": "^10.0.1",
-    "eslint": "^10.8.0",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-vue": "^10.10.0",
-    "globals": "^17.9.0",
-    "prettier": "^3.9.6",
-    "typescript-eslint": "^8.66.0"
-  }
+  "packageManager": "pnpm@12.15.0",
+  "type": "module"
 }

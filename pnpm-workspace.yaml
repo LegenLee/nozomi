@@ -1,13 +1,2 @@
 packages:
-  - "apps/nozomi-main"
-  - "apps/nozomi-renderer"
-  - "core"
-
-allowBuilds:
-  "@parcel/watcher": true
-  electron-winstaller: true
-
-catalog:
-  "@types/node": ^24.12.0
-  "typescript": ^6.0.3
-  "vite": ^8.2.0
+  - "renderer"
