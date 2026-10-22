@@ -1,3 +1,5 @@
 packages:
   - "core"
   - "renderer"
+allowBuilds:
+  "@parcel/watcher": false

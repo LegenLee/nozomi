@@ -1,7 +1,8 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <HelloWorld />
+  <VApp>
+    <VBtn>MD3 parity first</VBtn>
+    <VSwitch inset="material"></VSwitch>
+  </VApp>
 </template>
