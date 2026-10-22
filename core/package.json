@@ -1,0 +1,38 @@
+{
+  "name": "@nozomi/core",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Core source of the Nozomi.",
+  "author": "LegenLee",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/legenlee/nozomi",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/legenlee/nozomi"
+  },
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "release": "bumpp",
+    "prepublishOnly": "pnpm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "bumpp": "^12.3.0",
+    "tsdown": "^0.23.1",
+    "typescript": "~6.0.3",
+    "vitest": "^5.0.5"
+  }
+}
