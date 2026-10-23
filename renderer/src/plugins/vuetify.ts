@@ -13,9 +13,6 @@ import "@fontsource/google-sans-flex/latin-700.css";
 import "@fontsource/google-sans-flex/latin-800.css";
 import "@fontsource/google-sans-flex/latin-900.css";
 
-/**
- * @todo MD3 Expressive rounded 값 적용해야 함...
- */
 export const vuetify = createVuetify({
   blueprint: md3,
   icons: {
@@ -25,9 +22,11 @@ export const vuetify = createVuetify({
   },
   defaults: {
     VBtn: { rounded: null },
-    VBtnGroup: { size: "default" },
+    VBtnGroup: { rounded: "full", size: "default" },
     VBtnToggle: { size: "default" },
-    VSwitch: { inset: "material", color: "primary" },
+    VCard: { rounded: null },
     VCheckbox: { color: "primary" },
+    VDatePicker: { VBtn: { rounded: "full" } },
+    VSwitch: { inset: "material", color: "primary" },
   },
 });

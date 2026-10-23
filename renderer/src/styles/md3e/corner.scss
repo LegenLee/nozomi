@@ -1,0 +1,29 @@
+// MD3E corner tokens
+$rounded: (
+  // MD3 shorten corner tokens
+  "xs": 4px,
+  "sm": 8px,
+  "md": 12px,
+  "lg": 16px,
+  "lg-inc": 20px,
+  "xl": 28px,
+  "xl-inc": 32px,
+  "xxl": 48px,
+
+  // MD3E full-named corner tokens
+  "none": 0,
+  "x-small": 4px,
+  "small": 8px,
+  "medium": 12px,
+  "large": 16px,
+  "large-increased": 20px,
+  "x-large": 28px,
+  "x-large-increased": 32px,
+  "x-x-large": 48px,
+  "full": 9999px
+);
+
+// MD3E component default corner parity
+$button-rounded-border-radius: var(--v-btn-border-radius);
+$dialog-border-radius: 28px;
+$card-border-radius: 12px;
