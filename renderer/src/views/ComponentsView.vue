@@ -5,10 +5,12 @@ import {
   mdiClipboardText,
   mdiClipboardTextOutline,
   mdiCogOutline,
+  mdiDeleteOutline,
   mdiFactory,
   mdiPlus,
 } from "@mdi/js";
 import { ref } from "vue";
+import BasicDialog from "../components/dialog/BasicDialog.vue";
 import NavigationRailItem from "../components/navigation-rail/NavigationRailItem.vue";
 import { baselineLight, toVuetifyColors } from "../theme/m3-scheme.ts";
 
@@ -227,6 +229,51 @@ const pickedDate = new Date(2026, 2, 15);
               :transition="false"
             />
           </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-title-medium">Dialogs</h2>
+        <p class="text-body-small">열고 닫는 모션과 스크롤 구분선은 직접 열어 확인</p>
+        <div class="regression__row">
+          <BasicDialog
+            headline="작업지시를 저장할까요?"
+            text="저장하면 생산 계획에 바로 반영되고, 작업자 단말에도 전달됩니다."
+          >
+            <template #activator="{ props }">
+              <VBtn v-bind="props" variant="tonal">기본</VBtn>
+            </template>
+            <template #actions="{ close }">
+              <VBtn @click="close">취소</VBtn>
+              <VBtn @click="close">저장</VBtn>
+            </template>
+          </BasicDialog>
+          <BasicDialog
+            :icon="mdiDeleteOutline"
+            headline="설비를 삭제할까요?"
+            text="삭제한 설비의 가동 이력은 복구할 수 없습니다."
+          >
+            <template #activator="{ props }">
+              <VBtn v-bind="props" variant="tonal">hero 아이콘</VBtn>
+            </template>
+            <template #actions="{ close }">
+              <VBtn @click="close">취소</VBtn>
+              <VBtn @click="close">삭제</VBtn>
+            </template>
+          </BasicDialog>
+          <BasicDialog headline="사용 약관">
+            <template #activator="{ props }">
+              <VBtn v-bind="props" variant="tonal">긴 본문</VBtn>
+            </template>
+            <p v-for="n in 12" :key="n" class="mb-4">
+              {{ n }}. 본 시스템의 생산 데이터는 사내 보안 정책에 따라 관리되며, 승인된 사용자만 조회하고
+              수정할 수 있습니다. 작업 기록은 감사 목적으로 보관됩니다.
+            </p>
+            <template #actions="{ close }">
+              <VBtn @click="close">거절</VBtn>
+              <VBtn @click="close">동의</VBtn>
+            </template>
+          </BasicDialog>
         </div>
       </section>
 
