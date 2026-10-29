@@ -1,0 +1,4 @@
+// MD3 filled text field
+// The container color comes from styles/overrides.scss; drop Vuetify's resting 4% tint on top of it.
+// Hover and focus still add their state-layer opacity to this value.
+$field-overlay-filled-opacity: 0;

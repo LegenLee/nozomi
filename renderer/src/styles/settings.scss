@@ -1,11 +1,16 @@
 @use "./md3e/button";
 @use "./md3e/corner";
+@use "./md3e/field";
+@use "./md3e/ripple";
+@use "./md3e/slider";
+@use "./md3e/switch";
 @use "./md3e/typography";
 
 @use "vuetify/settings" with (
   $body-font-family: typography.$font-family,
   $heading-font-family: typography.$font-family,
 
+  $button-colored-disabled: false,
   $pagination-btn-sizes: button.$pagination-btn-sizes,
   $button-named-sizes: button.$button-named-sizes,
   $icon-btn-named-sizes: button.$icon-btn-named-sizes,
@@ -15,5 +20,20 @@
   $rounded: corner.$rounded,
   $button-rounded-border-radius: corner.$button-rounded-border-radius,
   $dialog-border-radius: corner.$dialog-border-radius,
-  $card-border-radius: corner.$card-border-radius
+  $card-border-radius: corner.$card-border-radius,
+
+  $field-overlay-filled-opacity: field.$field-overlay-filled-opacity,
+
+  $ripple-animation-transition-in: ripple.$ripple-animation-transition-in,
+  $ripple-animation-transition-out: ripple.$ripple-animation-transition-out,
+  $ripple-animation-visible-opacity: ripple.$ripple-animation-visible-opacity,
+
+  $slider-pill-thumb-label-background: slider.$slider-pill-thumb-label-background,
+  $slider-pill-thumb-label-color: slider.$slider-pill-thumb-label-color,
+
+  $switch-inset-unselected-track-color: switch.$switch-inset-unselected-track-color,
+  $switch-inset-unselected-thumb-color: switch.$switch-inset-unselected-thumb-color,
+  $switch-inset-selected-track-color: switch.$switch-inset-selected-track-color,
+  $switch-inset-selected-thumb-color: switch.$switch-inset-selected-thumb-color,
+  $switch-focus-outline-color: switch.$switch-focus-outline-color
 );

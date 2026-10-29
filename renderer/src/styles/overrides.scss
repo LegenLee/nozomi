@@ -1,0 +1,9 @@
+// Rules Vuetify has no setting for, in the cascade layer it reserves for overrides.
+@layer vuetify-overrides {
+  // M3 filled text field container. Vuetify tints filled fields with 4% of the text color instead;
+  // that tint is set to 0 in md3e/field.scss. A `bg-color` prop still wins.
+  .v-field--variant-filled:not(.v-field--has-background),
+  .v-field--variant-solo-filled:not(.v-field--has-background) {
+    background-color: rgb(var(--v-theme-surface-container-highest));
+  }
+}

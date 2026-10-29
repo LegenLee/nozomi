@@ -1,0 +1,7 @@
+// MD3 switch colors
+// Vuetify mixes these from its surface-variant pair, which now holds the M3 surface-variant roles.
+$switch-inset-unselected-track-color: rgb(var(--v-theme-surface-container-highest));
+$switch-inset-unselected-thumb-color: rgb(var(--v-theme-outline));
+$switch-inset-selected-track-color: rgb(var(--v-theme-primary));
+$switch-inset-selected-thumb-color: rgb(var(--v-theme-on-primary));
+$switch-focus-outline-color: rgb(var(--v-theme-secondary));

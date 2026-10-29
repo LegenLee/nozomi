@@ -1,0 +1,5 @@
+// MD3 timings for Vuetify's v-ripple, following Material Web's ripple, with the M3 pressed
+// state-layer opacity. Vuetify's JS still starts the ripple at 30% size and holds it for 250ms.
+$ripple-animation-transition-in: transform 450ms cubic-bezier(0.2, 0, 0, 1), opacity 105ms linear;
+$ripple-animation-transition-out: opacity 375ms linear;
+$ripple-animation-visible-opacity: calc(0.1 * var(--v-theme-overlay-multiplier));
